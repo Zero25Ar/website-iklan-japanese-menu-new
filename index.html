@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iklan Lezat & Segar - Japanese Special</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header Navigasi -->
+  <header>
+    <div class="logo">Kuliner<span>Hits</span></div>
+    <nav>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#menu">Menu Spesial</a></li>
+        <li><a href="#promo">Promo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <span class="badge">Diskon 50% Japanese Special!</span>
+      <h1>Sensasi Lezat & Segar Dalam Setiap Gigitan</h1>
+      <p>Nikmati pilihan hidangan khas Jepang terfavorit dari Katsu Curry, Ramen, Takoyaki, hingga Matcha & Ocha dingin yang memanjakan harimu.</p>
+      <button class="btn-cta" onclick="pesanSekarang()">Pesan Sekarang</button>
+    </div>
+
+    <!-- Container Gambar Animasi Floating -->
+    <div class="hero-images">
+      <div class="card-img floating-food">
+        <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=500&q=80" alt="Ramen Jepang">
+        <div class="tag">Japanese Food</div>
+      </div>
+      <div class="card-img floating-drink">
+        <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=500&q=80" alt="Matcha Latte">
+        <div class="tag">Matcha Series</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Menu Interaktif -->
+  <section id="menu" class="menu-section">
+    <h2>Menu Terfavorit & Khas Jepang</h2>
+    <div class="menu-grid">
+      
+      <!-- Card 1: Japanese (Chicken Katsu Curry) -->
+      <div class="menu-card">
+        <div class="card-badge japan">Jepang</div>
+        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=500&q=80" alt="Chicken Katsu Curry">
+        <h3>Chicken Katsu Curry</h3>
+        <p>Ayam katsu renyah disiram kuah kari Jepang kental yang gurih dan kaya rempah.</p>
+        <div class="card-bottom">
+          <span class="price">Rp 38.000</span>
+          <button class="btn-order" onclick="tambahKeKeranjang('Chicken Katsu Curry')">+</button>
+        </div>
+      </div>
+
+      <!-- Card 2: Japanese (Ramen Special) -->
+      <div class="menu-card">
+        <div class="card-badge japan">Jepang</div>
+        <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=500&q=80" alt="Special Ramen">
+        <h3>Beef Miso Ramen</h3>
+        <p>Mie ramen lembut dengan kuah kaldu miso gurih, irisan daging sapi, dan telur ajitsuke.</p>
+        <div class="card-bottom">
+          <span class="price">Rp 42.000</span>
+          <button class="btn-order" onclick="tambahKeKeranjang('Beef Miso Ramen')">+</button>
+        </div>
+      </div>
+
+      <!-- Card 3: Japanese (Takoyaki) -->
+      <div class="menu-card">
+        <div class="card-badge japan">Jepang</div>
+        <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=500&q=80" alt="Takoyaki">
+        <h3>Octopus Takoyaki (6 Pcs)</h3>
+        <p>Bola-bola tepung khas Osaka isi gurita segar dengan taburan katsuobushi dan saus gurih.</p>
+        <div class="card-bottom">
+          <span class="price">Rp 25.000</span>
+          <button class="btn-order" onclick="tambahKeKeranjang('Octopus Takoyaki')">+</button>
+        </div>
+      </div>
+
+      <!-- Card 4: Western (Burger) -->
+      <div class="menu-card">
+        <div class="card-badge">Makanan</div>
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80" alt="Juicy Burger">
+        <h3>Juicy Beef Burger</h3>
+        <p>Daging sapi pilihan dengan keju meleleh dan saus rahasia.</p>
+        <div class="card-bottom">
+          <span class="price">Rp 35.000</span>
+          <button class="btn-order" onclick="tambahKeKeranjang('Juicy Beef Burger')">+</button>
+        </div>
+      </div>
+
+      <!-- Card 5: Western (Fried Chicken) -->
+      <div class="menu-card">
+        <div class="card-badge">Makanan</div>
+        <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?auto=format&fit=crop&w=500&q=80" alt="Crispy Fried Chicken">
+        <h3>Crispy Fried Chicken</h3>
+        <p>Ayam goreng renyah bumbu rempah spesial dengan kulit super crispy.</p>
+        <div class="card-bottom">
+          <span class="price">Rp 25.000</span>
+          <button class="btn-order" onclick="tambahKeKeranjang('Crispy Fried Chicken')">+</button>
+        </div>
+      </div>
+
+      <!-- Card 6: Western (French Fries) -->
+      <div class="menu-card">
+        <div class="card-badge">Makanan</div>
+        <img src="https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=500&q=80" alt="Golden French Fries">
+        <h3>Golden French Fries</h3>
+        <p>Kentang goreng gurih renyah ditaburi keju dan bumbu bbq pilihan.</p>
+        <div class="card-bottom">
+          <span class="price">Rp 18.000</span>
+          <button class="btn-order" onclick="tambahKeKeranjang('Golden French Fries')">+</button>
+        </div>
+      </div>
+
+      <!-- Card 7: Minuman Japan (Matcha Latte) -->
+      <div class="menu-card">
+        <div class="card-badge drink">Minuman</div>
+        <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=500&q=80" alt="Ice Tea Matcha">
+        <h3>Ice Matcha Latte</h3>
+        <p>Teh hijau matcha Uji Jepang dikocok dengan susu segar yang creamy.</p>
+        <div class="card-bottom">
+          <span class="price">Rp 24.000</span>
+          <button class="btn-order" onclick="tambahKeKeranjang('Ice Matcha Latte')">+</button>
+        </div>
+      </div>
+
+      <!-- Card 8: Minuman Japan (Iced Cold Ocha) -->
+      <div class="menu-card">
+        <div class="card-badge drink">Minuman</div>
+        <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=500&q=80" alt="Cold Ocha Tea">
+        <h3>Iced Green Ocha Tea</h3>
+        <p>Teh hijau asli Jepang yang menyegarkan dan menyehatkan tanpa gula.</p>
+        <div class="card-bottom">
+          <span class="price">Rp 12.000</span>
+          <button class="btn-order" onclick="tambahKeKeranjang('Iced Green Ocha Tea')">+</button>
+        </div>
+      </div>
+
+      <!-- Card 9: Minuman (Milkshake) -->
+      <div class="menu-card">
+        <div class="card-badge drink">Minuman</div>
+        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=500&q=80" alt="Milkshake Strawberry">
+        <h3>Strawberry Milkshake</h3>
+        <p>Milkshake rasa stroberi lembut dilengkapi topping whipped cream manis.</p>
+        <div class="card-bottom">
+          <span class="price">Rp 26.000</span>
+          <button class="btn-order" onclick="tambahKeKeranjang('Strawberry Milkshake')">+</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">Pesanan berhasil ditambahkan!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
